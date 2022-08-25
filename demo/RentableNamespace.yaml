@@ -1,0 +1,12 @@
+apiVersion: "angler-dex.github.com/v1"
+kind: PoolContribution
+metadata:
+  name: demo-rentable-namespaces
+spec:
+  cpu: "200m"
+  memory: "128Mi"
+  location: "dn5bpsbw"
+  secretQuantity: 6
+  secretPriceFunc: "(1 * (q - r)) + 1"
+  # q= total quantity
+  # r= quantity remaining

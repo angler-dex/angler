@@ -1,0 +1,12 @@
+[submodule "mpc/emp-agmpc"]
+	path = mpc/emp-agmpc
+	url = ../emp-agmpc.git
+[submodule "mpc/emp-ot"]
+	path = mpc/emp-ot
+	url = ../emp-ot.git
+[submodule "mpc/emp-tool"]
+	path = mpc/emp-tool
+	url = ../emp-tool.git
+[submodule "mpc/emp-sh2pc"]
+	path = mpc/emp-sh2pc
+	url = git@github.com:emp-toolkit/emp-sh2pc.git

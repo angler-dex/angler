@@ -1,0 +1,122 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: angler-operator
+  labels:
+    app: angler-operator
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: angler-operator
+  template:
+    metadata:
+      labels:
+        app: angler-operator
+    spec:
+      serviceAccountName: angler-sa
+      #volumes:
+      #  - name: cert-volume
+      hostNetwork: true
+      containers:
+        - name: angler-operator
+          #image: angler:latest
+          image: docker.io/library/angler:latest
+          command: ["node", "src/angler-operator.js"]
+          imagePullPolicy: Never
+          #volumeMounts:
+          #  - name: data-volume
+          #    mountPath: "/angler-discovery/openssl"
+          env:
+            - name: LOC_PREFIX
+              value: "dn5bpsbw"
+            - name: PORT_START
+              value: "7700"
+          ports:
+            - name: dht
+              containerPort: 7700
+              protocol: UDP
+            - name: web
+              containerPort: 7701
+            - name: mpc0
+              containerPort: 7702
+            - name: mpc1
+              containerPort: 7703
+            - name: mpc2
+              containerPort: 7704
+            - name: mpc3
+              containerPort: 7705
+            - name: mpc4
+              containerPort: 7706
+            - name: mpc5
+              containerPort: 7707
+            - name: mpc6
+              containerPort: 7708
+            - name: mpc7
+              containerPort: 7709
+            - name: mpc8
+              containerPort: 7710
+            - name: mpc9
+              containerPort: 7711
+            - name: mpc10
+              containerPort: 7712
+            - name: mpc11
+              containerPort: 7713
+            - name: mpc12
+              containerPort: 7714
+            - name: mpc13
+              containerPort: 7715
+            - name: mpc14
+              containerPort: 7716
+            - name: mpc15
+              containerPort: 7717
+            - name: mpc16
+              containerPort: 7718
+            - name: mpc17
+              containerPort: 7719
+            - name: mpc18
+              containerPort: 7720
+            - name: mpc19
+              containerPort: 7721
+            - name: mpc20
+              containerPort: 7722
+            - name: mpc21
+              containerPort: 7723
+            - name: mpc22
+              containerPort: 7724
+            - name: mpc23
+              containerPort: 7725
+            - name: mpc24
+              containerPort: 7726
+            - name: mpc25
+              containerPort: 7727
+            - name: mpc26
+              containerPort: 7728
+            - name: mpc27
+              containerPort: 7729
+            - name: mpc28
+              containerPort: 7730
+            - name: mpc29
+              containerPort: 7731
+            - name: mpc30
+              containerPort: 7732
+            - name: mpc31
+              containerPort: 7733
+            - name: mpc32
+              containerPort: 7734
+            - name: mpc33
+              containerPort: 7735
+            - name: mpc34
+              containerPort: 7736
+            - name: mpc35
+              containerPort: 7737
+            - name: mpc36
+              containerPort: 7738
+            - name: mpc37
+              containerPort: 7739
+            - name: mpc38
+              containerPort: 7740
+            - name: mpc39
+              containerPort: 7741

@@ -1,0 +1,10 @@
+results/
+openssl/
+docker/
+#mpcbin/
+k8s_*
+gcp_*
+chameleon_*
+continuously_run.sh
+.dockerignore
+.gitattributes

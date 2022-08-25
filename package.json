@@ -1,0 +1,42 @@
+{
+  "name": "angler",
+  "version": "1.0.0",
+  "description": "Dark pool resource allocation",
+  "author": {
+    "name": "James Choncholas",
+    "email": "jchoncholas3@gatech.edu",
+    "url": "https://james.choncholas.com"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@kubernetes/client-node": "^0.13.2",
+    "async": "^3.2.4",
+    "bindings": "^1.5.0",
+    "bittorrent-dht": "^10.0.0",
+    "bittorrent-tracker": "^9.15.0",
+    "colors": "^1.4.0",
+    "expr-eval": "^2.0.2",
+    "express": "^4.17.1",
+    "external-ip": "^2.3.1",
+    "hashmap": "^2.4.0",
+    "ip": "^1.1.5",
+    "moment": "^2.27.0",
+    "node-addon-api": "^5.0.0",
+    "openssl-nodejs": "^1.0.5",
+    "request": "^2.88.2",
+    "tcp-ping": "^0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps": "./scripts/install_deps.sh",
+    "libs": "./scripts/build_libs.sh",
+    "compile": "cmake-js compile -- -j8",
+    "clean": "cmake-js clean",
+    "debug": "cmake-js compile -D -- -j8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angler-dex/angler"
+  },
+  "license": "ISC"
+}
