@@ -7,7 +7,7 @@ requested and without providers needing to share how many CPUs they have. The
 goal is to support a "dark pool" of resources where no one knows exactly how
 much infrastructure the pool contains and requests of the pool are fulfilled
 sharing the minimum amount of required information. This repo contains the
-source code of Angler, accompanying [this paper](TODO).
+source code of Angler, accompanying [this paper](https://doi.org/10.1145/3583740.3628440).
 
 This repo contains the source and a demonstration of Angler. The goal of the
 demo is to show a dark pool of managed Kubernetes-as-a-Service. Multiple
